@@ -8,7 +8,7 @@ client = OpenAI(
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
 )
 
-messages = [{"role": "user", "content": "75+85=？"}]
+messages = [{"role": "user", "content": "hello，who are you？"}]
 completion = client.chat.completions.create(
     model="deepseek-v4-pro",
     messages=messages,
