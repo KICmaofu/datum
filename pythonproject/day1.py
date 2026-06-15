@@ -13,8 +13,6 @@ class Spacecraft:
 
     def display_info(self):
         """
-        多态接口：基类的默认实现
-        子类可重写此方法以提供不同的显示内容
         """
         print(f"🚀 航天器：{self.name}")
         print(f"   国家：{self.country}")
