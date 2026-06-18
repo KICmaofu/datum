@@ -65,3 +65,15 @@ if __name__ == "__main__":
     print("\n获取数学成绩:", student1.get_grade("数学"))
     print("\n获取英语成绩:", student1.get_grade("英语"))
     print("\n获取编程成绩:", student1.get_grade("编程"))
+
+    student2 = Student("卯富", "2023001", 20, "计算机应用技术")
+    student2.add_grade("数学", 100)
+    student2.add_grade("英语", 136)
+    student2.add_grade("编程", 110)
+
+    print(student2)
+    print("\n详细信息:")
+    student2.display_info()
+    print("\n获取数学成绩:", student2.get_grade("数学"))
+    print("\n获取英语成绩:", student2.get_grade("英语"))
+    print("\n获取编程成绩:", student2.get_grade("编程"))
