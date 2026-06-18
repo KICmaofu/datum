@@ -7,7 +7,7 @@ class Student:
         self.grades = {}
 
     def add_grade(self, course, grade):
-        if 0 <= grade <= 100:
+        if 0 <= grade <= 150:
             self.grades[course] = grade
         else:
             print("成绩必须在0-100之间")
@@ -56,8 +56,8 @@ class Student:
 if __name__ == "__main__":
     student1 = Student("卯富", "2023001", 20, "计算机应用技术")
     student1.add_grade("数学", 100)
-    student1.add_grade("英语", 85)
-    student1.add_grade("编程", 90)
+    student1.add_grade("英语", 136)
+    student1.add_grade("编程", 110)
 
     print(student1)
     print("\n详细信息:")
