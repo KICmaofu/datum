@@ -20,6 +20,18 @@ class Student:
             return 0
         return sum(self.grades.values()) / len(self.grades)
 
+    def get_max_grade(self):
+        if not self.grades:
+            return "暂无成绩记录"
+        max_course = max(self.grades, key=self.grades.get)
+        return max_course, self.grades[max_course]
+
+    def get_min_grade(self):
+        if not self.grades:
+            return "暂无成绩记录"
+        min_course = min(self.grades, key=self.grades.get)
+        return min_course, self.grades[min_course]
+
     def display_info(self):
         print(f"姓名: {self.name}")
         print(f"学号: {self.student_id}")
@@ -30,6 +42,10 @@ class Student:
             for course, grade in self.grades.items():
                 print(f"  {course}: {grade}")
             print(f"平均成绩: {self.get_average_grade():.2f}")
+            max_course, max_grade = self.get_max_grade()
+            print(f"最高成绩: {max_course} - {max_grade}")
+            min_course, min_grade = self.get_min_grade()
+            print(f"最低成绩: {min_course} - {min_grade}")
         else:
             print("暂无成绩记录")
 
@@ -40,8 +56,8 @@ class Student:
 if __name__ == "__main__":
     student1 = Student("卯富", "2023001", 20, "计算机应用技术")
     student1.add_grade("数学", 100)
-    student1.add_grade("英语", 100)
-    student1.add_grade("编程", 100)
+    student1.add_grade("英语", 85)
+    student1.add_grade("编程", 90)
 
     print(student1)
     print("\n详细信息:")
